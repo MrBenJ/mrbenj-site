@@ -1,0 +1,41 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "css-modules",
+    "flowtype",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.config.js"
+      },
+      "node": {
+        "extensions": [
+          ".js"
+        ]
+      }
+    }
+  },
+  "root": true,
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+
+  "rules": {
+    "no-console": 1
+  }
+}

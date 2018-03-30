@@ -40,7 +40,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        loaders: ['babel-loader', 'eslint-loader'],
         include: [
             path.join(__dirname, 'app')
         ]
