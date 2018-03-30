@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import style from './style.scss';
 
 export default function FullscreenLayout({ children }) {
@@ -8,3 +10,7 @@ export default function FullscreenLayout({ children }) {
     </div>
   );
 }
+
+FullscreenLayout.propTypes = {
+  children: PropTypes.any
+};

@@ -18,7 +18,7 @@ module.exports = {
       publicPath: '/'
   },
   resolve: {
-      extensions: ['*', '.js'],
+    extensions: ['*', '.js'],
       alias: {
           '@app': path.resolve(__dirname, 'app')
       }
@@ -50,15 +50,13 @@ module.exports = {
       	loaders: ['json-loader', 'yaml-loader']
       },
       {
-      	test: /\.css$/,
+      	test: /\.scss$/,
       	use: [
       		'style-loader',
       		{
       			loader: 'css-loader',
       			options: {
-      				modules: true,
-      				sourceMap: true,
-      				localIdentName: '[local]_[hash:base64:3]'
+      				modules: true
       			}
       		},
       		{
