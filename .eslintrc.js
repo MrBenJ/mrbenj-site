@@ -1,17 +1,22 @@
-{
+const path = require('path');
+
+module.exports = {
   "parser": "babel-eslint",
   "plugins": [
     "react",
     "css-modules",
+    "babel",
     "flowtype",
     "jest"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:import/errors",
     "plugin:react/recommended"
   ],
   "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    },
     "import/resolver": {
       "webpack": {
         "config": "webpack.config.js"
@@ -26,6 +31,7 @@
   "root": true,
   "env": {
     "browser": true,
+    "node": true,
     "jest": true
   },
   "parserOptions": {
@@ -36,6 +42,10 @@
   },
 
   "rules": {
-    "no-console": 1
+    "no-console": 1,
+    "flowtype/require-valid-file-annotation": [
+      2,
+      "always"
+    ]
   }
 }

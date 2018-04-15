@@ -1,7 +1,7 @@
-import React from 'react';
+// @flow
+import React, { type Node } from 'react';
 
-
-export default function SidebarDrawerLayout(props) {
+export default function SidebarDrawerLayout(/*props: {} */): Node {
   return (
     <div>
       Sidebar drawer layout here

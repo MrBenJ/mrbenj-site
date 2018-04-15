@@ -1,9 +1,10 @@
+// @flow
 import React from 'react';
 import { render } from 'react-dom';
 
-import FullscreenLayout from './components/FullscreenLayout';
+import AppRoot from './components/AppRoot';
 
 render(
-  <FullscreenLayout>Hello, this is my awesome new site that will be ready soon</FullscreenLayout>,
+  <AppRoot />,
   document.getElementById('app')
 );

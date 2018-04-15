@@ -1,0 +1,14 @@
+[ignore]
+<PROJECT_ROOT>/app/index.js
+
+[include]
+
+[libs]
+flow-typed
+
+[lints]
+
+[options]
+module.name_mapper='^\@app' -> '<PROJECT_ROOT>/app'
+
+[strict]

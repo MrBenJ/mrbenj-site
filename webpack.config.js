@@ -1,9 +1,10 @@
+// @flow
 const webpack = require('webpack');
 const path = require('path');
 const DotenvPlugin = require('dotenv-webpack');
 
 module.exports = {
-	mode: 'development',
+  mode: 'development',
   entry: {
       index: ['./app/index.js']
   },
@@ -18,7 +19,6 @@ module.exports = {
       publicPath: '/'
   },
   resolve: {
-    extensions: ['*', '.js'],
       alias: {
           '@app': path.resolve(__dirname, 'app')
       }
@@ -46,34 +46,34 @@ module.exports = {
         ]
       },
       {
-      	test: /\.ya?ml$/,
-      	loaders: ['json-loader', 'yaml-loader']
+        test: /\.ya?ml$/,
+        loaders: ['json-loader', 'yaml-loader']
       },
       {
-      	test: /\.scss$/,
-      	use: [
-      		'style-loader',
-      		{
-      			loader: 'css-loader',
-      			options: {
-      				modules: true
-      			}
-      		},
-      		{
-      			loader: 'postcss-loader'
-      		},
-      		{
-      			loader: 'sass-loader'
-      		}
-      	]
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          },
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
-      	test: /\.svg$/,
-      	use: ['file-loader']
+        test: /\.svg$/,
+        use: ['file-loader']
       },
       {
-      	test: /\.flow$/,
-      	loader: 'ignore-loader'
+        test: /\.flow$/,
+        loader: 'ignore-loader'
       }
     ]
   }
