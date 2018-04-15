@@ -1,16 +1,15 @@
 // @flow
-import React from 'react';
-import type { Node } from 'react';
+import React, { type Node } from 'react';
 
-// import style from './style.scss';
+import style from './style';
 
 export type FullscreenLayoutProps = {
-  children?: ?Node | string
+  children?: Node | string
 };
 
 export default function FullscreenLayout({ children }: FullscreenLayoutProps): Node {
   return (
-    <div className={""/*style.fslayout */}>
+    <div className={style}>
       {children}
     </div>
   );

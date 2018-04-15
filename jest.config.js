@@ -12,4 +12,4 @@ module.exports = {
     "/node_modules/",
     "./app/components/style/*.js"
   ]
-}
+};
