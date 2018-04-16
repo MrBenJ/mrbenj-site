@@ -1,8 +1,10 @@
 // @flow
 import React, { Component } from 'react';
+import classNames from 'classnames';
+import style from './style';
 
 export type SideBarProps = {
-
+  isOpen?: boolean
 };
 
 export type SideBarState = {
@@ -18,9 +20,22 @@ class SideBar extends Component<SideBarProps, SideBarState> {
     };
   }
 
+  static defaultProps = {
+    isOpen: false
+  };
+
+  static getDerivedStateFromProps(nextProps: SideBarProps) {
+    return { isOpen: nextProps.isOpen };
+
+  }
+
   render() {
+    const { isOpen } = this.state;
+
     return (
-      <div>
+      <div className={classNames(style, {
+        open: isOpen
+      })}>
         Sidebar
       </div>
     );
