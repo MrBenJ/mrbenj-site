@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
 import classNames from 'classnames';
+
+import Icon from '@app/components/Icon';
 import style from './style';
 
 export type SideBarProps = {
@@ -26,7 +28,6 @@ class SideBar extends Component<SideBarProps, SideBarState> {
 
   static getDerivedStateFromProps(nextProps: SideBarProps) {
     return { isOpen: nextProps.isOpen };
-
   }
 
   render() {
@@ -36,7 +37,10 @@ class SideBar extends Component<SideBarProps, SideBarState> {
       <div className={classNames(style, {
         open: isOpen
       })}>
-        Sidebar
+      <Icon
+        name={isOpen ? 'fa-times' : 'fa-bars'}
+        className="toggle"
+        onClick={() => this.setState({ isOpen: !isOpen })} />
       </div>
     );
   }
