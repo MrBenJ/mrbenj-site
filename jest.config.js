@@ -3,6 +3,8 @@
 
 module.exports = {
   collectCoverage: true,
+  coverageDirectory: "coverage",
+  coverageReporters: [ "json", "lcov", "text"],
   verbose: true,
   setupTestFrameworkScriptFile: "./jest.setup.js",
   "moduleNameMapper": {

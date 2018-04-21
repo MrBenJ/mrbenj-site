@@ -22,4 +22,11 @@ describe('<AppRoot> tests', () => {
     expect(wrapper.find('FullscreenLayout')).toHaveLength(1);
   });
 
+  it('Renders router components', () => {
+    const wrapper = renderShallow();
+
+    expect(wrapper.find('HashRouter')).toHaveLength(1);
+    expect(wrapper.find('Switch')).toHaveLength(1);
+    expect(wrapper.find('Routes')).toHaveLength(1);
+  });
 });

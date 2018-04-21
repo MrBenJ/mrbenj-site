@@ -13,4 +13,12 @@ describe('<FullscreenLayout> tests', () => {
     expect(wrapper.find('div')).toHaveLength(1);
     expect(wrapper).toBeTruthy();
   });
+
+  it('Renders with children', () => {
+    const wrapper = renderShallow({
+      children: <div className="child">I am a child</div>
+    });
+
+    expect(wrapper.find('.child')).toHaveLength(1);
+  });
 });
