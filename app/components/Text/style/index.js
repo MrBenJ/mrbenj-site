@@ -12,3 +12,7 @@ export const ParagraphStyle = css`
 export const TextCenter = css`
   text-align: center;
 `
+
+export const FullWidth = css`
+  width: 100%;
+`;

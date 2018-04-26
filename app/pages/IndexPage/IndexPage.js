@@ -4,7 +4,8 @@ import React, { type Node } from 'react';
 import Image from '@app/components/Image';
 import {
   Paragraph as P,
-  Headline as H } from '@app/components/Text';
+  Headline as H
+} from '@app/components/Text';
 import FlexContainer from '@app/components/FlexContainer';
 import FlexItem from '@app/components/FlexItem';
 
@@ -25,8 +26,8 @@ export default function IndexPage(): Node {
         align-items="flex-start"
         flex-direction="column"
       >
-        <H center>Ben Junya - Worlds okayest programmer</H>
-        <P>This is my personal site</P>
+        <H center full>Ben Junya - Worlds okayest programmer</H>
+        <P center full>This is my personal site</P>
       </FlexContainer>
     </div>
   )
