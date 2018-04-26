@@ -11,10 +11,7 @@ export default function Header(props: HeaderProps): Node {
   const { su } = props;
   return (
     <header className={style}>
-      { su ?
-        'Admin enabled' :
-        'Regular Header here'
-      }
+      {su ? '' : ''}
     </header>
   )
 }

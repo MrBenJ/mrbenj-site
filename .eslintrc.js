@@ -48,6 +48,7 @@ module.exports = {
       "always"
     ],
     "flowtype/define-flow-type": 1,
-    "flowtype/use-flow-type": 1
+    "flowtype/use-flow-type": 1,
+    "react/prop-types": 0
   }
 }
