@@ -10,7 +10,8 @@ export type FlexContainerProps = {
   children: Node,
   'flex-direction': 'row' | 'column' | 'column-reverse',
   'justify-content': 'flex-start' | 'flex-end' | 'center' | 'space-around' | 'space-between',
-  'align-items': 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline'
+  'align-items': 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline',
+  'flex-wrap': 'wrap' | 'nowrap' | 'wrap-reverse'
 };
 
 export default function FlexContainer(props: FlexContainerProps): Node {
@@ -24,29 +25,18 @@ export default function FlexContainer(props: FlexContainerProps): Node {
         flex-direction: ${props['flex-direction']};
         justify-content: ${props['justify-content']};
         align-items: ${props['align-items']};
+        flex-wrap: ${props['flex-wrap']};
         `)}>
       {props.children}
     </div>
 
 
   );
-  // Should keep???????
-  // return (
-  //   <div className={classNames(style,{
-  //     "column": props.direction === 'column',
-  //     "column-reverse": props.direction === 'column-reverse',
-  //     "justify-flex-end": props['justify-content'] === 'flex-end',
-  //     "justify-center": props['justify-content'] === 'center',
-  //     "justify-around": props['justify-content'] === 'space-around',
-  //     "justify-between": props['justify-content'] === 'space-between'
-  //   })}>
-  //     {props.children}
-  //   </div>
-  // );
 }
 
 FlexContainer.defaultProps = {
   'flex-direction': 'row',
   'justify-content': 'flex-start',
-  'align-items': 'flex-start'
+  'align-items': 'flex-start',
+  'flex-wrap': 'wrap'
 };

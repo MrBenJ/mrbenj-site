@@ -4,7 +4,7 @@ import { css } from 'emotion';
 export default css`
 
   &.circle {
-    border-radius: 50%;
+    border-radius: 100%;
 
   }
 `;

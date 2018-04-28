@@ -19,7 +19,7 @@ export default function IndexPage(): Node {
         justify-content="space-around">
         <FlexItem>
           <Image
-            src="https://placehold.it/300x300"
+            src="http://res.cloudinary.com/dpctxqsij/image/upload/c_scale,w_400/v1524952131/ben_hike.jpg"
             circle={true}
           />
         </FlexItem>
@@ -30,7 +30,6 @@ export default function IndexPage(): Node {
       >
         <H className="intro" center full>Hey, I&apos;m Ben</H>
         <P center full>Full stack web engineer</P>
-        <P center full>I build stuff</P>
       </FlexContainer>
       <FlexContainer>
         <P className="pad" full>
@@ -61,9 +60,62 @@ export default function IndexPage(): Node {
           </a>
         </FlexItem>
       </FlexContainer>
-      <P center full>
+      <P className="work-blurb" center>
         Much of my work contains time-sensitve material and is not my own intellectual property. If you would like to view these work samples, please reach out to me at <a href="mailto:ben@mrbenj.io">ben@mrbenj.io</a>
       </P>
+      <H center full>Technologies</H>
+      <FlexContainer
+        align-items="center"
+        justify-content="space-around">
+        <FlexItem>
+          <P center full>React</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Redux</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Node</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Express</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Sass</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Emotion</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Python</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Flask</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>PostgreSQL</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Redis</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>GraphQL</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Relay Modern</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Apollo</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Jest</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Flow</P>
+        </FlexItem>
+        <FlexItem>
+          <P center full>Prisma</P>
+        </FlexItem>
+      </FlexContainer>
     </div>
-  )
+  );
 }

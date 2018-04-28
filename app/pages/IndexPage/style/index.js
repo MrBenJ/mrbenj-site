@@ -1,6 +1,7 @@
 // @flow
 import { css } from 'emotion';
 
+import { BP } from '@app/style';
 export default css`
 
   .intro {
@@ -16,4 +17,15 @@ export default css`
     margin: 2rem 0;
   }
 
+  .work-blurb {
+    margin: 2rem auto;
+    width: 75%;
+  }
+
+  @media screen and (min-width: ${BP.MD}) {
+
+    .work-blurb {
+      width: 50%;
+    }
+  }
 `;

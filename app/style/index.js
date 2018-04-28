@@ -16,3 +16,10 @@ export const FONT = {
   head: "'Istok Web', serif",
   body: "'Lora', sans-serif"
 };
+
+export const BP = {
+  SM: '540px',
+  MD: '720px',
+  LG: '960px',
+  XLG: '1140px'
+};
