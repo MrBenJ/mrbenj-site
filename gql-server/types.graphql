@@ -8,3 +8,7 @@ type Post @model {
   title: String! @migrationValue(value: "Default Title")
   text: String! @migrationValue(value: "")
 }
+
+type IndexPage @model {
+  id: ID! @isUnique
+}

@@ -13,6 +13,6 @@ export const COLORS = {
 };
 
 export const FONT = {
-  head: "Isotek Web",
-  body: "Lora"
+  head: "'Istok Web', serif",
+  body: "'Lora', sans-serif"
 };

@@ -23,11 +23,12 @@ export default function Headline(props: HeadlineProps) {
       {...rest}
       className={
         classNames(
+          className,
           HeadlineStyle,
-          center ? TextCenter : '',
-          full ? FullWidth : '',
-          className)}>
-        {children}
+          center && TextCenter,
+          full && FullWidth)}
+    >
+      {children}
     </p>
   );
 }
