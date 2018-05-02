@@ -6,5 +6,5 @@ const { primary } = COLORS;
 export default css`
   background-color: ${primary};
   height: 3rem;
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 `;

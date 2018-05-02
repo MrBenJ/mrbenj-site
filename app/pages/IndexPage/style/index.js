@@ -1,8 +1,10 @@
 // @flow
 import { css } from 'emotion';
 
-import { BP } from '@app/style';
+import { COLORS, BP } from '@app/style';
 export default css`
+
+  // background-image: linear-gradient(${COLORS.bright}, ${COLORS.dark_accent});
 
   .intro {
     margin-bottom: 1rem;
@@ -17,14 +19,18 @@ export default css`
     margin: 2rem 0;
   }
 
-  .work-blurb {
+  .work-blurb, .main-paragraph {
     margin: 2rem auto;
     width: 75%;
   }
 
+  .img {
+    max-width: 300px;
+  }
+
   @media screen and (min-width: ${BP.MD}) {
 
-    .work-blurb {
+    .work-blurb, .main-paragraph {
       width: 50%;
     }
   }
