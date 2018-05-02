@@ -129,6 +129,12 @@ export default function IndexPage(): Node {
         <FlexItem>
           <Image
             className="img"
+            src="https://res.cloudinary.com/dpctxqsij/image/upload/v1525225424/postgresql-logo.png"
+          />
+        </FlexItem>
+        <FlexItem>
+          <Image
+            className="img"
             src="https://res.cloudinary.com/dpctxqsij/image/upload/v1525225424/redux_logo.png"
           />
         </FlexItem>

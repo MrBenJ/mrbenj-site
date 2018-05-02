@@ -10,12 +10,15 @@ export type FlexItemProps = {
 };
 
 export default function FlexItem(props: FlexItemProps): Node {
+  const {
+    'align-self': alignSelf,
+    ...rest } = props;
   return (
     <div
-      {...props}
+      {...rest}
       className={classNames(props.className, css`
-        ${props['align-self']
-          ? 'align-self:'+props['align-self']+';'
+        ${alignSelf
+          ? 'align-self:'+alignSelf+';'
           : ''
         }
         `)}

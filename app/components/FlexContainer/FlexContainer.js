@@ -15,19 +15,28 @@ export type FlexContainerProps = {
 };
 
 export default function FlexContainer(props: FlexContainerProps): Node {
+
+  const {
+    'flex-direction': flexDirection,
+    'justify-content': justifyContent,
+    'align-items': alignItems,
+    'flex-wrap': flexWrap,
+    children,
+    ...rest } = props;
   return (
     <div
+      {...rest}
       className={classNames(props.className, css`
         display: flex;
         width: 100%;
         height: 100%;
 
-        flex-direction: ${props['flex-direction']};
-        justify-content: ${props['justify-content']};
-        align-items: ${props['align-items']};
-        flex-wrap: ${props['flex-wrap']};
+        flex-direction: ${flexDirection};
+        justify-content: ${justifyContent};
+        align-items: ${alignItems};
+        flex-wrap: ${flexWrap};
         `)}>
-      {props.children}
+      {children}
     </div>
 
 

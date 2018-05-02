@@ -1,9 +1,4 @@
-// import { css } from 'emotion';
-
-// export const BasePageStyle = css`
-//   padding-top: 3rem;
-// `;
-
+// @flow
 export const COLORS = {
   primary: "#1E90FF",
   primary_accent: "#13C4A3",

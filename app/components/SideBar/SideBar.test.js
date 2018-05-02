@@ -13,10 +13,10 @@ describe('<SideBar>', () => {
     expect(wrapper.find('div').length).toBeTruthy();
   });
 
-  it('Renders some links', () => {
+  it('Renders some <SideBarItem> components', () => {
     const wrapper = renderShallow();
 
-    expect(wrapper.find('Link').length).toBeTruthy();
+    expect(wrapper.find('SideBarItem').length).toBeTruthy();
   });
 
   it('Toggles open state on Icons', () => {
@@ -32,7 +32,7 @@ describe('<SideBar>', () => {
   it('... on Links', () => {
     const wrapper = renderShallow();
 
-    wrapper.find('Link').first().simulate('click', {
+    wrapper.find('SideBarItem').first().simulate('click', {
       currentTarget: { tagName: 'A'}}
     );
 

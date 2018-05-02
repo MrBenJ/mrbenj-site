@@ -1,9 +1,10 @@
 // @flow
 import React, { Component } from 'react';
-
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 
+import SideBarItem from './SideBarItem';
+import FlexContainer from '@app/components/FlexContainer';
+import FlexItem from '@app/components/FlexItem';
 import Icon from '@app/components/Icon';
 import style from './style';
 
@@ -52,13 +53,55 @@ class SideBar extends Component<SideBarProps, SideBarState> {
       <Icon
         name={isOpen ? 'fa-times' : 'fa-bars'}
         className="toggle"
-        onClick={this.toggleOpen} />
-      <div className="link-container">
-        <Link to="/" onClick={this.toggleOpen}>Home</Link>
-        <Link to="/contact" onClick={this.toggleOpen}>Contact</Link>
-        <Link to="/blog" onClick={this.toggleOpen}>Blog</Link>
-        <Link to="/speaking" onClick={this.toggleOpen}>Speaking</Link>
-      </div>
+        onClick={this.toggleOpen}
+      />
+      <FlexContainer
+        className="link-container"
+        flex-direction="column"
+        align-items="flex-start"
+      >
+        <FlexItem
+          className="full"
+          align-self="flex-start">
+          <SideBarItem
+            exact
+            to="/"
+            activeClassName="active"
+            onClick={this.toggleOpen}
+          >Home
+          </SideBarItem>
+        </FlexItem>
+        <FlexItem
+          className="full"
+          align-self="flex-start">
+          <SideBarItem
+            to="/contact"
+            activeClassName="active"
+            onClick={this.toggleOpen}
+          >Contact
+        </SideBarItem>
+        </FlexItem>
+        <FlexItem
+          className="full"
+          align-self="flex-start">
+          <SideBarItem
+            to="/blog"
+            activeClassName="active"
+            onClick={this.toggleOpen}
+          >Blog
+        </SideBarItem>
+        </FlexItem>
+        <FlexItem
+          className="full"
+          align-self="flex-start">
+          <SideBarItem
+            to="/speaking"
+            activeClassName="active"
+            onClick={this.toggleOpen}
+          >Speaking
+        </SideBarItem>
+        </FlexItem>
+      </FlexContainer>
       </div>
     );
   }
