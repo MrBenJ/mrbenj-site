@@ -10,6 +10,7 @@ describe('<SideBarItem> tests', () => {
   it('Renders without crashing', () => {
     const wrapper = renderShallow({
       to: "/speaking",
+      activeClassName: 'active',
       children: "hello world"
     });
 

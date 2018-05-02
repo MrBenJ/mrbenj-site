@@ -1,10 +1,9 @@
 // @flow
 import { css } from 'emotion';
 
-import { COLORS, BP } from '@app/style';
-export default css`
+import { BP } from '@app/style';
 
-  // background-image: linear-gradient(${COLORS.bright}, ${COLORS.dark_accent});
+export default css`
 
   .intro {
     margin-bottom: 1rem;
