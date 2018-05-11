@@ -11,6 +11,7 @@ export default css`
   background-color: ${COLORS.primary_accent};
 
   position: absolute;
+  z-index: 1;
   top: 0;
   left: -100%;
 
